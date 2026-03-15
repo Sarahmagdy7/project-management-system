@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <div class="header-section d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold">Projects List</h2>
+    
+    <div class="d-flex gap-3 align-items-center">
+      <div class="search-box">
+        <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchTerm">
+      </div>
+      <button class="btn btn-primary" routerLink="/add-project">
+        <i class="bi bi-plus-circle"></i> Add Project
+      </button>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-3" *ngFor="let project of filteredProjects()">
+      <div class="project-card shadow-sm h-100">
+        <div class="card-icon">
+          <i class="bi" [ngClass]="project.icon"></i>
+        </div>
+        
+        <div class="card-content">
+          <h5 class="text-truncate" [title]="project.name">{{ project.name }}</h5>
+          
+          <p class="description-text" [title]="project.description">{{ project.description }}</p>
+          
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="badge" [ngClass]="project.status === 'approved' ? 'bg-success' : 'bg-warning text-dark'">
+              {{ project.status }}
+            </span>
+            <button class="btn btn-outline-primary btn-sm" (click)="viewDetails(project.id)">
+              View project
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

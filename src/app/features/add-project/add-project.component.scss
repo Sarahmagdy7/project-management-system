@@ -1,0 +1,42 @@
+.form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  
+  h2 { color: #2c3e50; }
+
+  .card {
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+
+    h5 {
+      color: #333;
+      font-weight: 700;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+
+    .form-label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .form-control, .form-select {
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      padding: 10px;
+      
+      &:focus {
+        box-shadow: none;
+        border-color: #3498db;
+      }
+    }
+  }
+
+  .btn-primary {
+    background-color: #3498db;
+    border: none;
+    &:hover { background-color: #2980b9; }
+  }
+}

@@ -1,0 +1,38 @@
+<div class="container py-5 mt-4">
+  <div class="table-card shadow-sm rounded-15 overflow-hidden">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0 bg-white">
+        <thead class="custom-thead text-white">
+          <tr>
+            <th class="ps-4 py-3">ID</th>
+            <th>FULL NAME</th>
+            <th>USER ROLE</th>
+            <th>CREATED AT</th>
+            <th class="text-center pe-4">STATUS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of usersList">
+            <td class="ps-4 text-muted fw-bold small">{{ user.id }}</td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="avatar-wrapper me-3">
+                  <img [src]="user.img" [alt]="user.name" class="rounded-circle shadow-sm">
+                </div>
+                <span class="fw-bold text-dark">{{ user.name }}</span>
+              </div>
+            </td>
+            <td class="text-secondary font-medium">{{ user.role }}</td>
+            <td class="text-muted small">{{ user.createdAt }}</td>
+            <td class="text-center pe-4">
+              <span class="status-pill px-3 py-1 fw-bold" 
+                    [ngClass]="user.status === 'Verified' ? 'status-active' : 'status-suspended'">
+                {{ user.status }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

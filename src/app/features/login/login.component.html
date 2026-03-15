@@ -1,0 +1,44 @@
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2>Welcome Back</h2>
+    <p>Please login to your account</p>
+
+    <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+      
+      <div class="input-group">
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Email address"
+          [(ngModel)]="loginData.email" 
+          #email="ngModel"
+          required 
+          email>
+        
+        <small class="error" *ngIf="email.invalid && (email.touched || loginForm.submitted)">
+          Please enter a valid email.
+        </small>
+      </div>
+
+      <div class="input-group">
+        <input 
+          type="password" 
+          name="password" 
+          placeholder="Password"
+          [(ngModel)]="loginData.password" 
+          #password="ngModel"
+          required>
+        
+        <small class="error" *ngIf="password.invalid && (password.touched || loginForm.submitted)">
+          Password is required.
+        </small>
+      </div>
+
+      <button type="submit" class="login-btn">
+        Log In
+      </button>
+
+      <a href="#" class="forgot-link">Forgot Password?</a>
+    </form>
+  </div>
+</div>

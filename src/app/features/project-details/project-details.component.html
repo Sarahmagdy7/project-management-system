@@ -1,0 +1,36 @@
+<div class="container mt-5" *ngIf="project; else notFound">
+  <div class="details-wrapper d-flex flex-wrap gap-5 align-items-center">
+    
+    <div class="image-box">
+      <img [src]="project.image" alt="Project Image" class="main-img">
+    </div>
+
+    <div class="info-content">
+      <span class="sub-title">Our Story</span>
+      <h1 class="project-name">{{ project.projectName }}</h1>
+      <div class="status-badge" [ngClass]="project.status.toLowerCase().replace(' ', '-')">
+        Status: {{ project.status }}
+      </div>
+      
+      <div class="description-box mt-4">
+        <p>{{ project.description }}</p>
+        <p class="text-muted mt-2">
+          This project ID is #{{ project.id }}. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+
+      <button class="btn btn-outline-secondary mt-4" routerLink="/projects">
+        <i class="bi bi-arrow-left"></i> Back to Projects
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="container mt-5 text-center">
+    <h3>Project not found!</h3>
+    <button class="btn btn-primary" routerLink="/projects">Back to List</button>
+  </div>
+</ng-template>

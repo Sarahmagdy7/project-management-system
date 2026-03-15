@@ -1,0 +1,64 @@
+$primary-blue: #3b71ca;
+$dark-blue: #2a5298;
+
+.rounded-15 { 
+  border-radius: 20px !important; 
+}
+
+.policy-card {
+  border: none;
+  background: #ffffff;
+
+  .policy-header {
+    background: linear-gradient(135deg, $primary-blue 0%, $dark-blue 100%);
+  }
+
+  .policy-body {
+    line-height: 1.8;
+    color: #4a5568;
+
+    .section-title {
+      color: #2d3748;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 12px;
+        color: $primary-blue;
+      }
+    }
+
+    p {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+.data-list {
+  .list-item {
+    background-color: #f8fafc;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: translateX(10px);
+      background-color: #f1f5f9;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .policy-header {
+    padding: 30px 20px !important;
+    h1 { font-size: 1.8rem; }
+  }
+  
+  .policy-body {
+    padding: 25px !important;
+    
+    .section-title {
+      font-size: 1.2rem;
+    }
+  }
+}

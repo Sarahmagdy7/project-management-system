@@ -1,0 +1,46 @@
+<div class="profile-wrapper">
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="img-container">
+        <img [src]="adminInfo.image" alt="Admin Profile">
+      </div>
+    </div>
+
+    <div class="info-list">
+      <div class="info-item">
+        <label>Name</label>
+        <p>{{ adminInfo.name }}</p>
+      </div>
+
+      <div class="info-item">
+        <label>Email</label>
+        <p>{{ adminInfo.email }}</p>
+      </div>
+
+      <div class="info-item">
+        <label>Phone Number</label>
+        <p>{{ adminInfo.phone }}</p>
+      </div>
+
+      <div class="info-item">
+        <label>Age</label>
+        <p>{{ adminInfo.age }} Years</p>
+      </div>
+
+      <div class="info-item">
+        <label>Country</label>
+        <p>{{ adminInfo.country }}</p>
+      </div>
+
+      <div class="info-item">
+        <label>Governorate</label>
+        <p>{{ adminInfo.governorate }}</p>
+      </div>
+
+      <div class="info-item border-none">
+        <label>University</label>
+        <p>{{ adminInfo.university }}</p>
+      </div>
+    </div>
+  </div>
+</div>

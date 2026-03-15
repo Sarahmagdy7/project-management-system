@@ -1,0 +1,26 @@
+<div class="dashboard-wrapper">
+  <div class="header">
+    <h2>Welcome, {{ userName }}</h2>
+  </div>
+
+  <div class="grid-container">
+    <div class="stat-card" *ngFor="let item of stats">
+      <div class="card-header">
+        <div class="icon-circle" [ngClass]="item.colorClass">
+          <i class="fas" [ngClass]="item.icon"></i>
+        </div>
+        <span class="menu-dots">...</span>
+      </div>
+
+      <div class="card-body">
+        <span class="location">{{ item.location }}</span>
+        <h4 class="company-name">{{ item.name }}</h4>
+        <p class="title-info">{{ item.title }}: <strong>{{ item.count }}</strong></p>
+      </div>
+
+      <div class="card-footer">
+        <span class="date">20 Dec 2026</span>
+      </div>
+    </div>
+  </div>
+</div>

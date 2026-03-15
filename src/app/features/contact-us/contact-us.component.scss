@@ -1,0 +1,41 @@
+.contact-page {
+  background-color: #f4f7f6;
+  min-height: 100vh;
+}
+
+.rounded-15 {
+  border-radius: 20px !important;
+}
+
+.bg-primary {
+  background: linear-gradient(45deg, #3b71ca, #2a5298) !important;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 2px solid #eee;
+  border-radius: 0;
+  padding: 10px 5px;
+  background: transparent;
+  
+  &:focus {
+    box-shadow: none;
+    border-color: #3b71ca;
+    background: #fdfdfd;
+  }
+}
+
+.btn-dark {
+  background-color: #1a1a1a;
+  transition: all 0.3s;
+  &:hover:not(:disabled) {
+    background-color: #333;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 991px) {
+  .col-lg-5, .col-lg-7 {
+    padding: 30px !important;
+  }
+}

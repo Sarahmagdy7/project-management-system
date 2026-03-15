@@ -1,0 +1,60 @@
+.nav-link.active {
+  color: var(--bs-primary) !important;
+  font-weight: 600;
+  background-color: rgba(13, 110, 253, 0.05);
+  border-radius: 8px;
+}
+
+.btn-nav-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  background: #f8f9fa;
+  transition: all 0.3s;
+}
+
+.btn-nav-circle:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .nav-item {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .nav-link {
+    padding: 10px 15px !important;
+  }
+
+  .dropdown-menu {
+    border: 1px solid #eee !important;
+    box-shadow: none !important;
+    margin-bottom: 10px;
+  }
+}
+
+.animate {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(1rem); opacity: 0; }
+  100% { transform: translateY(0rem); opacity: 1; }
+}
+
+.slideIn { animation-name: slideIn; }
