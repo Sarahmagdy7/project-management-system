@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FirstProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# project-management-system
+A Project Management Web Application built with Angular, featuring authentication, dashboard, user management, and project management.
+>>>>>>> 357ca8bca9e544dce791cb0f28473c56e1581971
