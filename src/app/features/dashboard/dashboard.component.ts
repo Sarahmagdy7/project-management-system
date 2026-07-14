@@ -17,10 +17,13 @@ export class DashboardComponent implements OnInit {
     private router: Router 
   ) {}
 
+
   ngOnInit(): void {
     this.stats = this.dashboardService.getStats();
   }
-
+goToLogin(): void {
+    this.router.navigate(['/login']);
+  }
   logout() {
     localStorage.removeItem('isLoggedIn');
     

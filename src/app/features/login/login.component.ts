@@ -14,6 +14,10 @@ export class LoginComponent {
     password: ''
   };
 
+
+  goToLogin(): void {
+    this.router.navigate(['/login']);
+  }
   constructor(private router: Router) {}
 
   onLogin(form: NgForm) {

@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class ProfileService {
   
-  // بيانات افتراضية
   private defaultData = {
     name: '',
     email: '',

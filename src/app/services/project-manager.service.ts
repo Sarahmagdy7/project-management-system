@@ -4,17 +4,16 @@ export interface Project {
   id: number;
   name: string;
   description: string;
-  status: 'Active' | 'Completed' | 'In Progress'; // تحديد قيم ثابتة للحالة
+  status: 'Active' | 'Completed' | 'In Progress';  
   icon: string;
   color: string;
-  dateCreated: string; // إضافة تاريخ الإنشاء
+  dateCreated: string; 
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectManagerService {
-  // بيانات تجريبية تحاكي نظام المستشفى الذكي
   private projectsList: Project[] = [
     { 
       id: 1, 
@@ -38,12 +37,10 @@ export class ProjectManagerService {
 
   constructor() { }
 
-  // جلب كل المشاريع
   getAllProjects(): Project[] {
-    return [...this.projectsList]; // إرجاع نسخة لحماية البيانات الأصلية
+    return [...this.projectsList]; 
   }
 
-  // إضافة مشروع جديد مع توليد ID تلقائي
   addProject(project: Omit<Project, 'id'>) {
     const newId = this.projectsList.length > 0 
       ? Math.max(...this.projectsList.map(p => p.id)) + 1 
@@ -53,12 +50,10 @@ export class ProjectManagerService {
     this.projectsList.push(newProject);
   }
 
-  // البحث عن مشروع بالـ ID
   getProjectById(id: number): Project | undefined {
     return this.projectsList.find(p => p.id === id);
   }
 
-  // حذف مشروع (مهم جداً لإدارة النظام)
   deleteProject(id: number) {
     this.projectsList = this.projectsList.filter(p => p.id !== id);
   }
