@@ -15,5 +15,5 @@ A Project Management Web Application built with Angular.
 - Angular
 - TypeScript
 - HTML
-- CSS
+- SCSS
 - Bootstrap
